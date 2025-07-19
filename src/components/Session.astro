@@ -1,0 +1,55 @@
+---
+import { formatDate } from "../../libs/dateFormat";
+import { getEntries, type CollectionEntry } from "astro:content";
+export interface Props {
+  session: CollectionEntry<"sessions">;
+  tColour: string;
+}
+
+const { session, tColour } = Astro.props;
+const { Content } = await session.render();
+
+const conductors = await getEntries(session.data.conductedBy);
+---
+
+<div class="card flex h-full w-full flex-col">
+  <div
+    class={`bg-var flex-shrink border-b-2 border-neutral-800 py-4 px-4 leading-5 md:px-8`}
+  >
+    <h3 class="mb-2 text-xl font-bold">
+      {session.data.title}
+    </h3>
+    <p class="text-base font-medium">
+      {session.data.date ? formatDate(session.data.date) : "TBD"}
+    </p>
+    {
+      conductors.length >= 1 && (
+        <p class="text-base font-light">
+          Conducted by{" "}
+          <span class="font-medium">
+            {conductors
+              .map((c) => (c.data as any as { name: string }).name)
+              .join(", ")}
+          </span>
+        </p>
+      )
+    }
+  </div>
+  <div class="bg-white px-4 pb-4 pt-4 md:px-8">
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+    <div class="items-end text-end text-lg"></div>
+  </div>
+</div>
+<style define:vars={{ tColour }}>
+  .bg-var {
+    background: var(--tColour);
+  }
+
+  .card {
+    border: 3px solid black;
+    box-shadow: 6px 6px 0px 0px;
+    /* transition: ease 0.2s; */
+  }
+</style>

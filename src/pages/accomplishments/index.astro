@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import AccomplishmentCard from "../../components/AccomplishmentCard.astro";
+import Maintain from "../../components/Maintain.astro"; // Use when site under maintainance
+import { getCollection } from "astro:content";
+
+const colours = [
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+];
+
+const accomplishments = await getCollection("accomplishments");
+accomplishments.sort(function (a, b) {
+  return b.data.date.getTime() - a.data.date.getTime();
+});
+---
+
+<Layout title="Accomplishments | Megabyte">
+  <div class="bg-line h-full px-8 pt-24 pb-8 sm:pt-36 md:px-24">
+    <div class="mb-8 flex flex-row items-center justify-center">
+      <div class="title-box bg-[#ceff1b] py-6 px-6 text-center md:w-3/4">
+        <h1 class="mb-5 text-center text-2xl font-bold md:text-3xl xl:text-4xl">
+          Accomplishments
+        </h1>
+        <p class="mb-3 text-center text-lg md:text-xl xl:text-xl">
+          What the society and its members have been up to, in and outside
+          school.
+        </p>
+
+        <p>
+          Email <span
+            ><a target="_blank" href="mailto:tsrs.mgbt@gmail.com"
+              >tsrs.mgbt@gmail.com</a
+            ></span
+          > in case you would like one of your tech-related accomplishments to
+          be featured on the website. Please find guidelines for the same <a
+            class="underline font-bold"
+            href="https://docs.google.com/document/d/1Gqt7jevVNO-v3vUxaR3INSPHcOF0IcZoNNWS2ewIJ1c/edit?usp=sharing"
+            >here</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    {
+      !accomplishments ? (
+        // if there are no events found
+        <div class="">No accomplishments to display at the moment.</div>
+      ) : (
+        // map each event to its own block
+        <div class="mb-5 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {accomplishments.map(async (accomplishment, num) => {
+            return (
+              <div>
+                <AccomplishmentCard
+                  accomplishment={accomplishment}
+                  tColour={colours[num % colours.length]}
+                />
+              </div>
+            );
+          })}
+        </div>
+      )
+    }
+
+    <style>
+      .title-box {
+        @apply border-[3px] border-solid border-black shadow-[6px_6px_0_0_black];
+      }
+      a {
+        @apply underline;
+      }
+    </style>
+  </div>
+</Layout>

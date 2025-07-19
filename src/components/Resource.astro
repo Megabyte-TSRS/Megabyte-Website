@@ -1,0 +1,63 @@
+---
+import Button from "./Button.astro";
+import type { CollectionEntry } from "astro:content";
+import { marked } from "marked";
+interface Props {
+  resource: CollectionEntry<"resources">;
+}
+
+const { resource } = Astro.props;
+const { Content } = await resource.render();
+const likes = "❤️";
+---
+
+<div
+  id={`resource-${resource.slug}`}
+  class="card bg-white flex h-full w-full flex-col pb-3 items-end"
+>
+  <h2
+    class="w-full bg-grad border-b-2 border-neutral-800 py-3 px-4 text-xl font-bold"
+  >
+    {resource.data.title}
+  </h2>
+  <div class="px-4 py-3 text-justify w-full flex-grow">
+    <div set:html={marked.parse(resource.data.description || "")} />
+  </div>
+  <!-- <Button link="" text="Read more" color={resource.data.colors[0]} /> -->
+  <a
+    href={`/resources/${resource.slug}`}
+    class="link-button bg w-fit bg-opacity-0 py-[0.2em] text-center font-mono text-lg hover:cursor-pointer self-end mr-4"
+  >
+    <div class="h-full w-full px-3 flex justify-center items-center">
+      <span class="w-fit text-base font-light">Read more</span>
+    </div>
+  </a>
+
+  <style
+    define:vars={{
+      colour1: resource.data.colors[0],
+      colour2: resource.data.colors[1],
+    }}
+  >
+    .bg-grad {
+      background-image: linear-gradient(
+        to bottom,
+        var(--colour1) 0%,
+        var(--colour2) 100%
+      );
+    }
+    .bg {
+      background-color: var(--color);
+    }
+    .link-button {
+      border: 2px solid black;
+      box-shadow: 4px 4px 0px 0px;
+      color: black;
+    }
+
+    .link-button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px;
+    }
+  </style>
+</div>

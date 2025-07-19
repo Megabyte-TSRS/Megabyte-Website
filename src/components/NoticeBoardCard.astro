@@ -1,0 +1,57 @@
+---
+import { formatDate } from "../../libs/dateFormat";
+import type { CollectionEntry } from "astro:content";
+export interface Props {
+  notice: CollectionEntry<"notices">;
+  tColour: string;
+}
+
+const { notice, tColour } = Astro.props;
+
+const { Content } = await notice.render();
+---
+
+<div class="card flex h-full w-full flex-col">
+  <div class={`bg-var flex-shrink border-b-2 border-neutral-800 py-4 px-4 leading-5 md:px-8`}>
+    <h3 class="mb-2 text-xl font-bold">
+      {notice.data.title}
+    </h3>
+    <p class="text-base font-medium">
+      Posted {formatDate(notice.data.postDate)}
+    </p>
+  </div>
+  <div class="bg-white flex-grow px-4 pb-4 pt-4 md:px-8">
+    <div class="prose max-w-none">
+      <Content />
+    </div><div class="flex flex-col gap-3 text-left text-lg"></div>
+  </div>
+</div>
+
+<style define:vars={{ tColour }}>
+  .bg-var {
+    background: var(--tColour);
+  }
+
+  .card {
+    border: 3px solid black;
+    box-shadow: 6px 6px 0px 0px;
+    /* transition: ease 0.2s; */
+  }
+
+  .card:hover .title {
+    background-image: linear-gradient(
+      rgba(210, 210, 210, 0.1),
+      rgba(210, 210, 210, 20%)
+    );
+    transition: ease 0.2s;
+  }
+  .link-button {
+    background: #ffffff;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px 0px;
+  }
+  .link-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px;
+  }
+</style>

@@ -1,0 +1,360 @@
+---
+import NoticeBoardCard from "../components/NoticeBoardCard.astro";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import AccomplishmentCard from "../components/AccomplishmentCard.astro";
+import { getCollection } from "astro:content";
+// import favicon.ico from ''
+// import Maintain from "../components/Maintain.astro"; // Use when site under maintainance
+const colours = [
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+];
+const colorClassNames =
+  "bg-[#81effc] bg-[#ffe81b] bg-[#ff7474] bg-[#81effc] bg-[#ffe81b] bg-[#ff7474] bg-[#81effc] bg-[#ffe81b] bg-[#ff7474] bg-[#81effc] bg-[#ffe81b] bg-[#ff7474]";
+
+const notices = await getCollection("notices");
+notices.sort(function (a, b) {
+  return b.data.postDate.getTime() - a.data.postDate.getTime();
+});
+const accomplishments = await getCollection("accomplishments");
+accomplishments.sort(function (a, b) {
+  return b.data.date.getTime() - a.data.date.getTime();
+});
+---
+
+<Layout title="Megabyte" class="=-mandatory true-h-screen w-screen">
+  <div
+    class="bg-hero-pattern true-h-screen bg-cover bg-center bg-no-repeat pt-[25vh] lg:pt-[15vh] pb-[25vh] lg:pb-[20vh] px-5"
+  >
+    <div class="flex h-full flex-col items-center text-center justify-between">
+      <div class="container flex flex-col gap-2">
+        <span
+          class="-mb-5 text-lg font-semibold uppercase md:text-2xl xl:max-w-[50vw]"
+          >We are</span
+        >
+        <div id="megabyte-hero-name" class="font-semibold tracking-wider">
+          Megabyte
+        </div>
+        <span
+          class="text-lg font-semibold uppercase md:text-2xl xl:max-w-[50vw]"
+          >The computer society of The Shri Ram School, Moulsari</span
+        >
+      </div>
+      <div
+        class="flex flex-row items-center justify-center text-center text-2xl lg:text-4xl"
+      >
+        <span class="comm text-center"
+          ><span class="l-hidden"> A community of</span>
+          <span>Enthus<span class="blue-u understroke">iasts</span></span>, <span
+            >Innov<span class="yel-u understroke">ators</span></span
+          >, and<span> M<span class="red-u understroke">akers</span></span>.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body bg-cube py-8 pt-16">
+    <div class="notice mb-16 px-8 md:px-24">
+      <div class="section-title-box mb-6 w-fit p-5 text-left">
+        <p class="mb-2 text-2xl font-semibold tracking-wider md:text-3xl">
+          Notice Board
+        </p>
+        <p class="text-lg font-medium tracking-wide">
+          Upcoming events, opportunities, and announcements.
+        </p>
+      </div>
+
+      <div class="mb-2">
+        {
+          !notices ? (
+            <div>No notices to display.</div>
+          ) : (
+            // <h1 class="text-center text-xl">().</h1>
+            // map each event to its own block
+            notices.map(async (notice, num) => {
+              const colour = colours[num];
+              return (
+                <div class="mb-[2em]">
+                  <NoticeBoardCard notice={notice} tColour={colour} />
+                </div>
+              );
+            })
+          )
+        }
+      </div>
+
+      <div class="w-full p-3 text-right">
+        <Button color="#ceff1b" text="See All" link="/notice-board" />
+      </div>
+    </div>
+    <div class="acc mb-16 px-8 md:px-24">
+      <div
+        class="section-title-box mb-6 w-fit p-[2.25vmin] text-left"
+        id="accomplishments-title-box"
+      >
+        <p class="mb-2 text-2xl font-semibold tracking-wider md:text-3xl">
+          Accomplishments
+        </p>
+        <p class="text-lg font-medium tracking-wide">
+          What the society and its members have been up to, in and outside
+          school.
+        </p>
+      </div>
+
+      <div
+        class={`mb-5 grid w-full gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}
+      >
+        {
+          !accomplishments ? (
+            // if there are no events found
+            <div>No accomplishments to display at the moment.</div>
+          ) : (
+            // map each event to its own block
+            accomplishments.slice(0, 3).map(async (accomplishment, num) => {
+              const colour = colours[num];
+              return (
+                <div>
+                  <AccomplishmentCard
+                    accomplishment={accomplishment}
+                    tColour={colour}
+                  />
+                </div>
+              );
+            })
+          )
+        }
+      </div>
+      <div class="w-full p-3 text-right">
+        <Button color="#ceff1b" text="See All" link="/accomplishments" />
+      </div>
+    </div>
+    <div class="mb-16 px-8 md:px-24">
+      <a
+        class="section-title-box inline-block mb-6 w-fit px-8 py-8 text-left group"
+        href="/resources"
+      >
+        <p class="mb-2 text-2xl font-semibold tracking-wider md:text-3xl">
+          Resources
+        </p>
+        <p class="mb-6 text-lg font-medium tracking-wide md:text-xl">
+          Collections of links, guides, and more to help you learn about all
+          things tech
+        </p>
+
+        <div
+          id="resources-learn-more-btn"
+          class="bg-green w-fit px-1 py-2 text-center font-mono text-lg hover:cursor-pointer"
+        >
+          <div
+            class="flex h-full w-fit flex-row items-center justify-center gap-2 px-4"
+          >
+            <span class="font-body font-bold">Learn more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="m12 16l4-4l-4-4l-1.4 1.4l1.6 1.6H8v2h4.2l-1.6 1.6Zm0 6q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <style>
+      #resources-learn-more-btn {
+        border: 3px solid black;
+        box-shadow: 6px 6px 0px 0px #000;
+      }
+      .section-title-box:hover #resources-learn-more-btn {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0px 0px;
+        box-shadow: 3px 3px 0px 0px;
+      }
+      #resources-learn-more-btn svg {
+        width: 2em;
+        height: 2em;
+        transition: 0.5s ease;
+      }
+      /* #resources-learn-more-btn svg:hover {
+        transform: translate(3px, 0px);
+      } */
+    </style>
+  </div>
+</Layout>
+
+<style>
+  .topMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weare {
+    font-size: 7vmin;
+    /* identical to box height */
+    letter-spacing: -0.01em;
+  }
+  .bg-hero-pattern {
+    background-image: linear-gradient(to top, white, transparent 5rem),
+      url(/assets/anime-lines.svg);
+  }
+  .body {
+    mask-image: linear-gradient(to bottom, transparent, black 4rem);
+    margin-top: -1rem;
+  }
+  #megabyte-hero-name {
+    font-size: 15vmin;
+    /* identical to box height */
+    color: #cceaff;
+    text-shadow:
+      -2px 2px 0px #000,
+      2px 2px 0px #000,
+      8px 6px 0px #000,
+      -2px -2px 0px #000;
+  }
+  .understroke {
+    background-size: 100% 0.5em;
+    background-repeat: no-repeat;
+    background-position: center 0.75em;
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+  }
+
+  .blue-u {
+    background-image: linear-gradient(#82e8ff, #82e8ff);
+  }
+  .yel-u {
+    background-image: linear-gradient(#ffe81b, #ffe81b);
+  }
+  .red-u {
+    background-image: linear-gradient(#ff7474, #ff7474);
+  }
+
+  .section-title-box {
+    cursor: pointer;
+    transition: ease 0.4s;
+    letter-spacing: -0.01em;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    background-color: white;
+  }
+
+  .section-title-box:active {
+    transform: rotate(-5deg);
+    transition: ease 0.4s;
+  }
+
+  @media (max-width: 67em) {
+    .l-hidden {
+      display: none;
+    }
+    .rec-text {
+      line-height: 32px;
+    }
+    #megabyte-hero-name {
+      text-shadow:
+        -2px 2px 0px #000,
+        2px 2px 0px #000,
+        6px 4px 0px #000,
+        -2px -2px 0px #000;
+    }
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+</style>
+<script is:inline async>
+  class TextScramble {
+    constructor(el) {
+      this.el = el;
+      this.chars = "!<>-_\\/[]{}—=+*^?#________";
+      this.update = this.update.bind(this);
+    }
+    setText(newText) {
+      const oldText = this.el.innerText;
+      const length = Math.max(oldText.length, newText.length);
+      const promise = new Promise((resolve) => (this.resolve = resolve));
+      this.queue = [];
+      for (let i = 0; i < length; i++) {
+        const from = oldText[i] || "";
+        const to = newText[i] || "";
+        const start = Math.floor(Math.random() * 40);
+        const end = start + Math.floor(Math.random() * 40);
+        this.queue.push({ from, to, start, end });
+      }
+      cancelAnimationFrame(this.frameRequest);
+      this.frame = 0;
+      this.update();
+      return promise;
+    }
+    update() {
+      let output = "";
+      let complete = 0;
+      for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i];
+        if (this.frame >= end) {
+          complete++;
+          output += to;
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar();
+            this.queue[i].char = char;
+          }
+          output += `<span class="dud">${char}</span>`;
+        } else {
+          output += from;
+        }
+      }
+      this.el.innerHTML = output;
+      if (complete === this.queue.length) {
+        this.resolve();
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+      }
+    }
+    randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)];
+    }
+  }
+  async function scramble() {
+    const phrases = ["Megabyte"];
+    const el = document.querySelector("#megabyte-hero-name");
+    const fx = new TextScramble(el);
+    let counter = 0;
+    fx.setText(phrases[counter]);
+  }
+  document.addEventListener(
+    "astro:page-load",
+    async () => {
+      scramble().then(
+        setInterval(async () => {
+          await scramble();
+        }, 1000 * 10),
+      );
+    },
+    { once: true },
+  );
+  document.addEventListener("astro:after-swap", async () => {
+    scramble();
+  });
+</script>

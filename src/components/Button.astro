@@ -1,0 +1,30 @@
+---
+export interface Props {
+  link: string;
+  text: string;
+  color: string;
+}
+const { link, text, color } = Astro.props;
+---
+
+<button
+  class="link-button bg w-fit bg-opacity-0 py-2 text-center font-mono text-lg hover:cursor-pointer"
+>
+  <a href={link} class="h-full w-full px-4 font-bold">
+    <span class="w-fit">{text}</span>
+  </a>
+</button>
+<style define:vars={{ color }}>
+  .bg {
+    background-color: var(--color);
+  }
+  button {
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px 0px;
+    color: black;
+  }
+  button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px 0px;
+  }
+</style>

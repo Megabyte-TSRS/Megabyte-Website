@@ -1,0 +1,303 @@
+---
+import navPages from "../../navPages";
+
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<div class="navbar absolute w-screen lg:mt-[1em] lg:px-24 z-50">
+  <div
+    class="wrapper bg-white flex w-full flex-col items-center justify-start px-10 lg:static lg:flex-row lg:justify-between"
+  >
+    <div class="hamburgerGroup flex flex-row items-center justify-evenly">
+      <a href="/" class="navHome lg:bhover:hover:scale-[102%]" title="Home">
+        <div class="flex h-full w-full flex-row items-center justify-center">
+          <img
+            class="mr-[-0.35em] w-[3.6vw] min-w-[60px] transform-gpu"
+            src="/assets/logo.svg"
+            alt="tsrs logo"
+          />
+          <img
+            class="mr-3 w-[3.5vw] min-w-[50px]"
+            src="/final/mega-bw.svg"
+            alt="megabyte logo"
+          />
+          <p class="mb-[0.03em] text-2xl font-bold uppercase">Megabyte</p>
+          <!-- <div id="mgbt-underline" class="w-1/2 h-1 bg-[#74bcffb4]"></div> -->
+        </div>
+      </a>
+      <button aria-controls="navlinks" aria-expanded="false" class="nav-toggle">
+        <span class="hamburger-menu grid w-16 place-items-center lg:hidden"
+          ><svg
+            class="ham hamRotate ham8"
+            viewBox="0 0 100 100"
+            onclick="this.classList.toggle('active')"
+          >
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+            ></path>
+            <path class="line middle" d="m 30,50 h 40"></path>
+            <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+            ></path>
+          </svg></span
+        >
+      </button>
+    </div>
+    <div
+      class="navlinks-div relative flex h-0 flex-col gap-3 lg:visible lg:static lg:block lg:h-auto"
+      data-visible="false"
+    >
+      <div
+        class="navlinks hiddenNavlinks flex h-full flex-col justify-around lg:h-auto lg:flex-row lg:justify-start text-center"
+      >
+        {
+          Object.entries(navPages).map((page) => (
+            <a
+              class={pathname == page[1] ? "navlink current" : "navlink"}
+              id={page[0].toLowerCase()}
+              href={page[1]}
+            >
+              <span class="text-md lg:text-xl navlink-text">
+                {page[0].toUpperCase()}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .bg-white {
+    background-color: #fff;
+  }
+
+  .current {
+    font-weight: 600;
+  }
+
+  .navlink {
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 19px;
+  }
+  .navlink-text {
+    font-family: "Roboto Mono", monospace;
+  }
+  .navlink:not(.current) .navlink-text:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    text-decoration-color: black;
+  }
+
+  .current {
+    cursor: default;
+    transition: 0.25s ease;
+  }
+
+  .current:active {
+    pointer-events: none;
+  }
+  .font-mono {
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .wrapper {
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px 0px #000;
+    /* transition: 0.25s ease; */
+  }
+
+  .scrolled {
+    animation: solidify 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .mega {
+    text-decoration: underline #74bcffb4 0.2em;
+    text-underline-offset: 7px;
+  }
+
+  .navHome > div > p > span {
+    transition: 0.2s ease;
+  }
+
+  .navHome:hover > div > p > span {
+    text-decoration: underline #ff7474 0.3rem;
+  }
+
+  .symbol {
+    display: none;
+  }
+
+  .megabyte-text {
+    font-family: Lexend;
+  }
+  @media (max-width: 1023px) {
+    .wrapper {
+      /* background: rgba(255, 255, 255, 0.75); */
+      box-shadow: 0px 0px 0px 0px;
+      transition: 0.25s ease;
+    }
+
+    .navbar {
+      top: 0;
+    }
+    .hamburgerGroup {
+      width: 90vw;
+      justify-content: space-between;
+    }
+
+    .left-side-container {
+      padding-left: 0rem;
+    }
+
+    .navlinks-div {
+      transition: 0.5s ease;
+      -webkit-transition: 0.5s ease;
+    }
+    .navlinks-div[data-visible="true"] {
+      height: 60vh;
+    }
+
+    @supports (backdrop-filter: blur(0.25rem)) {
+      .wrapper[blur="true"] {
+        backdrop-filter: blur(0.25rem);
+      }
+    }
+
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s ease;
+      -webkit-transition: 0.5s ease;
+    }
+
+    .hiddenNavlinks {
+      opacity: 0;
+      transition: 0.25s ease;
+      -webkit-transition: 0.25s ease;
+      pointer-events: none;
+    }
+
+    .navlink-text {
+      font-size: 2.5vmax;
+    }
+    .symbol {
+      display: inline;
+      grid-area: icons;
+    }
+
+    .visibleSymbol {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.25s;
+      -webkit-transition: 0.25s;
+    }
+
+    .hiddenSymbol {
+      opacity: 0;
+      transition: 0.25s ease;
+      visibility: hidden;
+    }
+
+    .ham {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 400ms;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .hamRotate.active {
+      transform: rotate(45deg);
+    }
+    .hamRotate180.active {
+      transform: rotate(180deg);
+    }
+    .line {
+      fill: none;
+      transition:
+        stroke-dasharray 700ms,
+        stroke-dashoffset 700ms;
+
+      stroke: #000;
+      stroke-width: 5.5;
+      stroke-linecap: round;
+    }
+    .ham8 .top {
+      stroke-dasharray: 40 160;
+    }
+    .ham8 .middle {
+      stroke-dasharray: 40 142;
+      transform-origin: 50%;
+      transition: transform 400ms;
+    }
+    .ham8 .bottom {
+      stroke-dasharray: 40 85;
+      transform-origin: 50%;
+      transition:
+        transform 400ms,
+        stroke-dashoffset 400ms;
+      -webkit-transition:
+        transform 400ms,
+        stroke-dashoffset 400ms;
+    }
+    .ham8.active .top {
+      stroke-dashoffset: -64px;
+    }
+    .ham8.active .middle {
+      //stroke-dashoffset: -20px;
+      transform: rotate(90deg);
+    }
+    .ham8.active .bottom {
+      stroke-dashoffset: -64px;
+    }
+  }
+</style>
+
+<script>
+  async function setup() {
+    console.log("Setup nav");
+    const nav = document.querySelector(".navlinks-div");
+    const navlinks = document.querySelector(".navlinks");
+    const navToggle = document.querySelector(".nav-toggle");
+    const wrapper = document.querySelector(".wrapper");
+    // console.log(nav, navlinks, navToggle, wrapper);
+    (navToggle as HTMLElement).addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let visible = nav?.getAttribute("data-visible");
+      visible = visible === "false" ? "true" : "false";
+
+      nav?.setAttribute("data-visible", visible);
+      wrapper?.setAttribute("blur", visible);
+      (navToggle as HTMLElement).setAttribute("aria-expanded", visible);
+
+      if (visible === "true") {
+        navlinks?.classList.remove("hiddenNavlinks");
+        navlinks?.classList.add("visible");
+        // document.querySelector(".hamburger-menu").innerHTML = "close";
+      } else {
+        navlinks?.classList.remove("visible");
+        navlinks?.classList.add("hiddenNavlinks");
+        // document.querySelector(".hamburger-menu").innerHTML = "menu";
+      }
+    });
+
+    document.addEventListener("scroll", () => {
+      if (window.scrollY != 0) {
+        wrapper?.classList.add("scrolled");
+      } else {
+        wrapper?.classList.remove("scrolled");
+      }
+    });
+  }
+  document.addEventListener("astro:page-load", async () => {
+    setup();
+  });
+</script>

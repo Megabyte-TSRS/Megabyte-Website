@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import AccomplishmentMain from "../../components/AccomplishmentMain.astro";
+
+// this isnt used??
+
+export async function getStaticPaths() {
+  const sessionEntries = await getCollection("sessions");
+  return sessionEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const colours = [
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+];
+
+const colour = colours[Math.floor(Math.random() * colours.length)];
+---
+
+<Layout title="Resources | Megabyte">
+  <div class="bg-line h-full px-8 pt-24 pb-8 sm:pt-36">
+    <AccomplishmentMain tColour={colour} entry={entry} />
+  </div>
+</Layout>

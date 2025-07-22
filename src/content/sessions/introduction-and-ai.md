@@ -1,10 +1,7 @@
 ---
 title: Introduction to the society and artificial intelligence
 date: 2023-04-10
-description: "
-In the first session, society members explored foundational AI concepts, including machine learning principles and AI categories. They built a computer vision model using Google Teachable Machine to classify recyclable materials and discussed AI limitations like accuracy and bias.
-
-"
+description: "In the first session, society members explored foundational AI concepts, including machine learning principles and AI categories. They built a computer vision model using Google Teachable Machine to classify recyclable materials and discussed AI limitations like accuracy and bias."
 conductedBy: [arjun-sharma]
 ---
 

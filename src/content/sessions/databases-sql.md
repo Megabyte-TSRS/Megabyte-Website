@@ -1,9 +1,7 @@
 ---
 title: Introduction to databases and SQL
 date: 2023-07-31
-description: "
-Society members explored databases and SQL through an interactive session. They learned relational database fundamentals, query techniques, and security vulnerabilities. The session concluded with a practical challenge and a discussion on real-world applications.
-"
+description: "Society members explored databases and SQL through an interactive session. They learned relational database fundamentals, query techniques, and security vulnerabilities. The session concluded with a practical challenge and a discussion on real-world applications."
 conductedBy: [arjun-sharma]
 ---
 

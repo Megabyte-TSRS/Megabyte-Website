@@ -1,7 +1,7 @@
 ---
 title: Behind the Hunt
 date: 2025-07-03
-description: "In this interactive session, members of the Megabyte Society got an inside look at how Crypthunt-style puzzles are created. Crypthunt, a digital treasure hunt known for its cryptic clues and tech-based challenges, has become one of the most exciting events of the year — and this time, students weren’t just solving it, they were designing it."
+description: "In this interactive session, members of the Megabyte Society got an inside look at how Crypthunt-style puzzles are created. Crypthunt, a digital treasure hunt known for its cryptic clues and tech-based challenges, has become one of the most exciting events of the year, and this time, students weren’t just solving it, they were designing it."
 conductedBy: [shayan-sethi]
 ---
 

@@ -1,9 +1,9 @@
 {
-    "Name": "Devyansh Garg",
-    "Links": [
+    "name": "Devyansh Garg",
+    "links": [
         {
-            "Name": "GitHub",
-            "URL": "https://github.com/Devonkedev"
+            "name": "GitHub",
+            "url": "https://github.com/Devonkedev"
         }
     ]
 }

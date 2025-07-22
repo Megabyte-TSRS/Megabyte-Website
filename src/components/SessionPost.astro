@@ -2,11 +2,12 @@
 import { formatDate } from "../../libs/dateFormat";
 import type { CollectionEntry } from "astro:content";
 export interface Props {
-  resource: CollectionEntry<"resources">;
+  session: CollectionEntry<"sessions">;
+  tColour: string;
 }
 
-const { resource } = Astro.props;
-const { Content } = await resource.render();
+const { session, tColour } = Astro.props;
+const { Content } = await session.render();
 ---
 
 <div class="card flex h-full w-full flex-col">
@@ -14,16 +15,16 @@ const { Content } = await resource.render();
     class="bg-var flex flex-row items-center gap-5 border-b-2 border-neutral-800 px-5 py-5 md:px-6"
   >
     <!-- <div class="logo">
-      <img src={resource.data.img} alt="Icon for resource" class="w-[14vh]" />
+      <img src={session.data.img} alt="Icon for session" class="w-[14vh]" />
     </div> -->
     <div class="title flex items-center">
       <div>
         <h3 class="mb-1 text-[2.6vh] font-bold">
-          {resource.data.title}
+          {session.data.title}
         </h3>
         <h3 class="text-md italic">
           Last updated <span class=""
-            >{formatDate(resource.data.lastUpdated)}</span
+            >{formatDate(session.data.date)}</span
           >
         </h3>
       </div>
@@ -41,12 +42,11 @@ const { Content } = await resource.render();
 
   <style
     define:vars={{
-      colour1: resource.data.colors[0],
-      colour2: resource.data.colors[1],
+tColour: tColour 
     }}
   >
     .bg-var {
-      background: var(--colour1);
+      background: var(--tColour);
     }
   </style>
 </div>

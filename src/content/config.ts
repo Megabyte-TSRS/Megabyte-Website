@@ -6,7 +6,7 @@ const accomplishmentsCollection = defineCollection({
     title: z.string(),
     date: z.date(), // date in yyyy-mm-dd format - for eg 13th december 2017 is 2017-12-13
     subline: z.string(),
-    media: z.array(z.string()),// file paths - urls or strings
+    media: z.array(z.string()), // file paths - urls or strings
   }),
 });
 const noticesCollection = defineCollection({
@@ -17,12 +17,13 @@ const noticesCollection = defineCollection({
     tags: z.array(z.string()).optional(),
   }),
 });
-const sessionCollection = defineCollection({
+const sessionsCollection = defineCollection({ // Corrected from sessionCollection to sessionsCollection
   type: "content",
   schema: z.object({
     title: z.string(),
     conductedBy: z.array(reference("conductors")),
     date: z.date().optional(),
+    description: z.string(),
     tags: z.array(z.string()).optional(),
     priority: z.number().optional().default(0),
   }),
@@ -56,6 +57,6 @@ export const collections = {
   accomplishments: accomplishmentsCollection,
   notices: noticesCollection,
   resources: resourcesCollection,
-  sessions: sessionCollection,
+  sessions: sessionsCollection, // Corrected from sessionCollection to sessionsCollection
   conductors: conductorsCollection,
 };

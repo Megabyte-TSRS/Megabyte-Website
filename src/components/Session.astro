@@ -37,10 +37,21 @@ const conductors = await getEntries(session.data.conductedBy);
   </div>
   <div class="bg-white px-4 pb-4 pt-4 md:px-8">
     <div class="prose max-w-none">
-      <Content />
+      {session.data.description && (
+        <p class="text-lg font-medium">{session.data.description}</p>
+      )}
+
     </div>
-    <div class="items-end text-end text-lg"></div>
+    <div class="items-end text-end text-lg">
+      <a
+      href={`/sessions/${session.slug}`}
+      class="hover:pointer bg-white link-button px-4 py-2 text-center font-mono text-sm uppercase"
+    >
+      <span class="font-bold">Read more</span>
+    </a>
+    </div>
   </div>
+
 </div>
 <style define:vars={{ tColour }}>
   .bg-var {
@@ -52,4 +63,7 @@ const conductors = await getEntries(session.data.conductedBy);
     box-shadow: 6px 6px 0px 0px;
     /* transition: ease 0.2s; */
   }
+  .link-button {
+      @apply bg-white border-[2px] border-solid border-black shadow-[4px_4px_0px_0px] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px];
+    }
 </style>

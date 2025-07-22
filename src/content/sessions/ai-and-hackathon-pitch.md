@@ -1,6 +1,7 @@
 ---
 title: Hackathons and artificial intelligence
 date: 2023-04-17
+description: "In this session, participants explored hackathons and learned how to craft compelling pitches. Teams brainstormed innovative environmental tech solutions using a computer vision model, generating ideas from agriculture tools to biodiversity protection products."
 conductedBy: [arjun-sharma]
 ---
 

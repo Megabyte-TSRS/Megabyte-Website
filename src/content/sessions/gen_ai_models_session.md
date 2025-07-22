@@ -1,7 +1,7 @@
 ---
 title: Tech That Thinks, Speaks & Connects.
 date: 2025-04-22
-desctription: "Society members explored multiple tools across AI, even training their own model and presenting its functioning to the rest of the members. Members looked at multiple tools from the Meta FAIR and also used Seamless Language AI."
+description: "Society members explored multiple tools across AI, even training their own model and presenting its functioning to the rest of the members. Members looked at multiple tools from the Meta FAIR and also used Seamless Language AI."
 conductedBy: [kierat-singh]
 ---
 

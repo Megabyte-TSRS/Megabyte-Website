@@ -23,6 +23,7 @@ const sessionCollection = defineCollection({
     title: z.string(),
     conductedBy: z.array(reference("conductors")),
     date: z.date().optional(),
+    description: z.string(),
     tags: z.array(z.string()).optional(),
     priority: z.number().optional().default(0),
   }),

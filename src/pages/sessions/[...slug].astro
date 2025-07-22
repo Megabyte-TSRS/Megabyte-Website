@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import AccomplishmentMain from "../../components/AccomplishmentMain.astro";
+import SessionPost from "../../components/SessionPost.astro";
 
 // this isnt used??
 
@@ -38,6 +39,6 @@ const colour = colours[Math.floor(Math.random() * colours.length)];
 
 <Layout title="Resources | Megabyte">
   <div class="bg-cube h-full px-8 pt-24 pb-8 sm:pt-36">
-    <AccomplishmentMain tColour={colour} entry={entry} />
+    <SessionPost session={entry} tColour={colour} />
   </div>
 </Layout>

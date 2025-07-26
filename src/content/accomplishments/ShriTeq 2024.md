@@ -8,7 +8,7 @@ media:
   ]
 ---
 
-Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating in 12 events over the course of 12 days, finished as runners-up in ShriTeq 2022.
+Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating in 12 events over the course of 12 days, finished as runners-up in ShriTeq 2024.
 
 ---
 

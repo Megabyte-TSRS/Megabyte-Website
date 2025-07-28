@@ -20,8 +20,8 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 
 1st place, **Middle Web Design**: Amaira Kapoor and Kartikeya Shastri (grade 8)
 
-2nd runners-up, **Senior Quiz**: Kartik Pathak (grade 11), Aaron Anand (grade 9), and Vansh Jagtiani (grade 9).
+2nd Place, **Crypt Hunt**
 
-Runners-up, **Crypt Hunt**
+3rd Place, **Senior Quiz**: Kartik Pathak (grade 11), Aaron Anand (grade 9), and Vansh Jagtiani (grade 9).
 
-2nd runners-up, **Middle quiz**: Anshuman Tanwar, Agrim Jain, and Attharv Bhagchandka (grade 8)
+3rd Place, **Middle quiz**: Anshuman Tanwar, Agrim Jain, and Attharv Bhagchandka (grade 8)

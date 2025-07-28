@@ -17,6 +17,8 @@ Team 1 (AmbuLink) consisted of:
 3. Abhyudaya Gupta (grade 10)
 4. Devyansh Garg (grade 10)
 
+You can see the team's project [here](https://github.com/Aarushaggarwal-theone/AmbuLink).
+
 Team 2 (FinFlux) consisted of:
 
 1. Aaryan Chadha (grade 12)

@@ -1,5 +1,5 @@
 ---
-title: Pathways School Gurgaon Hackathon - Ek Pehchan
+title: Ek Pehchan Hackathon @ Pathways School Gurgaon
 date: 2023-08-09
 subline: Our team won this social-impact themed hackathon for their education app.
 media:

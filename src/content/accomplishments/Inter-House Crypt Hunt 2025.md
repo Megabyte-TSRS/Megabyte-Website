@@ -42,7 +42,7 @@ The organising team consisted of:
 8. Ameera Jadeja (Secretary of Activities)
 9. Shashvat Singh (Secretary of Activities)
 10. Aakansh Bhargava
-11. Atharv Bhagchandka
+11. Attharv Bhagchandka
 12. Shayan Sethi
 13. Shiv Chandra
 

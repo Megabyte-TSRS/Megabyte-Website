@@ -4,7 +4,7 @@ date: 2022-05-07
 subline: Megabyte members worked with the ICT department to co-organise this inter-house event, which saw almost 200 participants from across houses and grades in a closely-fought contest.
 media:
   [
-    "https://dinvpjybsthgrzixefvj.supabase.co/storage/v1/object/public/strapi-uploads/SCR-20230323-tih_1679602198093.png",
+    https://i.ibb.co/2cqHqrV/logo-light.png,
   ]
 ---
 

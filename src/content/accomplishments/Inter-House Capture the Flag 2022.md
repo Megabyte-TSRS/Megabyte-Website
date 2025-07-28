@@ -1,7 +1,7 @@
 ---
 title: Inter-House Capture the Flag 2022
 date: 2022-05-07
-subline: Megabyte members worked with the ICT department to co-organise this inter-house event, which saw almost 200 participants from across houses and grades in a closely-fought contest.
+subline: Megabyte worked with the ICT department to co-organise this intra-school puzzle-solving event.
 media:
   [
     https://i.ibb.co/2cqHqrV/logo-light.png,

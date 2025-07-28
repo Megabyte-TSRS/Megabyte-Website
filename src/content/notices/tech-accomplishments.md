@@ -7,5 +7,5 @@ Have you worked on a tech project, built something innovative, won a tech compet
 
 Submit your work here: [https://forms.cloud.microsoft/r/cRTHCJV5DD](https://forms.cloud.microsoft/r/cRTHCJV5DD)
 
-All entries will be reviewed, and selected projects will be showcased on the website. You can email [mgbt.tsrs@gmail.com](mgbt.tsrs@gmail.com) for any queries.
+All entries will be reviewed, and selected projects will be showcased on the website. You can email [mailto:mgbt.tsrs@gmail.com](mgbt.tsrs@gmail.com) for any queries.
 

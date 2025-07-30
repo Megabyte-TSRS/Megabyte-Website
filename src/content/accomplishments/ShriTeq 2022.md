@@ -4,7 +4,7 @@ date: 2022-10-12
 subline: TSRS Moulsari and Vasant Vihar's teams finished as overall runners-up in ShriTeq 2022
 media:
   [
-    https://dinvpjybsthgrzixefvj.supabase.co/storage/v1/object/public/strapi-uploads/CA33435_1679582560718.jpg,
+    https://i.postimg.cc/J4Qtd3qc/temp-Imagears-Q5-K.avif,
   ]
 ---
 

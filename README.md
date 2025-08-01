@@ -48,7 +48,3 @@ All commands are run from the root of the project, from a terminal:
 * Use margin-bottoms (through tailwind's `mb-*` class). Avoid `margin-top` properties, those tend to be more difficult to comprehend.
 
 * \[Important] Run `prettier write .` before any commit. This cleans your files, and sorts tailwind classes in a consistent order. You can run `prettier write myfile.astro` to format a single file.
-
- In general, strive for maintainability and readability. It should be as easy as possible to make minor changes without breaking the whole layout. Strive for as little pure CSS as possible, and use Tailwind and modern CSS as much as you can.
-
-Read the [Tailwind documentation](https://tailwindcss.com/docs) for more information.

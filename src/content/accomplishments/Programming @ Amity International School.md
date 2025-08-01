@@ -1,6 +1,6 @@
 ---
 title: Programming @ Amity International School
-date: 2025-08-01
+date: 2025-11-11
 subline: Our team placed 2nd in this competetive coding competition
 media:
   [

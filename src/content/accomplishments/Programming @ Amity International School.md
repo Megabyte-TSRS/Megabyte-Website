@@ -1,5 +1,5 @@
 ---
-title: Programming @ Amity International School
+title: Robotronics Programming @ Amity International School
 date: 2024-11-11
 subline: Our team placed 2nd in this competetive coding competition
 media:
@@ -8,7 +8,7 @@ media:
   ]
 ---
 
-At Amity International School's Competetive Coding competition, Programming, our team secured an impressive 2nd place. The event had two stages -- a preliminary and a finals round. Participants had to solve a series of programming problems under a time limit, using any programming language they want. The winners were decided based on the accuracy of their code as well as the time they took to write it.
+At Amity International School's Competetive Coding event, Programming, our team secured an impressive 2nd place. The event had two stages -- a preliminary and a finals round. Participants had to solve a series of programming problems under a time limit, using any programming language they want. The winners were decided based on the accuracy of their code as well as the time they took to write it.
 
 The team consisted of:
 

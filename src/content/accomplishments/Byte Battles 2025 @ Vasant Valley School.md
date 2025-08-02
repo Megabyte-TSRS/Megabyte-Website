@@ -1,7 +1,7 @@
 ---
-title: Byte Battles 2025 @ Vasant Valley School
+title: TechVViz Byte Battles 2025 @ Vasant Valley School
 date: 2025-08-01
-subline: Our school placed 3rd in this competetive coding competition
+subline: Our team placed 3rd in the 'Byte Battles' competetive coding event
 media:
   [
     https://i.postimg.cc/FHZq12tB/Screenshot-2025-08-01-at-11-15-27-PM.png,

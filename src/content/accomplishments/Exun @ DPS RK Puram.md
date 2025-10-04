@@ -1,5 +1,5 @@
 ---
-title: Exun @ DPS RK Puram
+title: Exun 2022 @ DPS RK Puram
 date: 2022-11-14
 subline: Our teams won the 'Build' hackathon event, made it to the finals of the Exun quiz and gaming events, and more.
 media:

@@ -39,4 +39,4 @@ The organising team consisted of:
 7. Nayantara Chakravarty
 8. Arjun Narasimhan
 
-We thank everyone who participated in the Crypt Hunt this year, and hope for it to continue to foster out-of-the-box-thinking and communitybuilding through technology in future years.
+We thank everyone who participated in the Crypt Hunt this year, and hope for it to continue to foster out-of-the-box-thinking and community building through technology in future years.

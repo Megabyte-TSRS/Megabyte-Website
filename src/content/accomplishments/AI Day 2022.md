@@ -1,14 +1,14 @@
 ---
 title: AI Day 2022
 date: 2022-05-13
-subline: Members of the computer society and the ICT department co-organised the school's first-ever AI Day.
+subline: Members of the megabyte society and the ICT department co-organised the school's first-ever AI Day.
 media:
   [
-    https://dinvpjybsthgrzixefvj.supabase.co/storage/v1/object/public/strapi-uploads/AI-Day_1679594989319.png,
+    "https://i.ibb.co/ss6vYnq/ai-week-installations.jpg"
   ]
 ---
 
-Members of the computer society and the ICT department co-organised the school's first-ever AI Day on the 13th of May.
+Members of the megabyte society and the ICT department co-organised the school's first-ever AI Day on the 13th of May.
 
 During junior and senior long lunch, multiple installations were set up in cluster A to demonstrate the capabilities of applications of AI. These included:
 

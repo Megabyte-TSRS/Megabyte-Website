@@ -4,11 +4,11 @@ date: 2023-01-22
 subline: Our hackathon team placed second at this automation-themed hackathon.
 media:
   [
-    https://dinvpjybsthgrzixefvj.supabase.co/storage/v1/object/public/strapi-uploads/email-ext_1679590107805.jpg,
+    https://i.postimg.cc/XJwBTzQ5/Screenshot-2025-10-24-at-10-52-49-PM.png,
   ]
 ---
 
-At Pathways Noida's inter-school 'Autohacks' event, our three-member team placed second with their project, email.ext, a GPT-poweered Chrome extension that automate replies to emails.
+At Pathways Noida's inter-school 'Autohacks' event, our three-member team placed second with their project, email.ext, a GPT-powered Chrome extension that automate replies to emails.
 
 The team consisted of Aarush Aggarwal (grade 9), Shreedhar Raj (grade 9) and Ritwic Verma (grade 11). They built the project with ReactJS and Flask.
 

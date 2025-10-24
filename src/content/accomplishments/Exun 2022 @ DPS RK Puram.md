@@ -4,7 +4,7 @@ date: 2022-11-14
 subline: Our teams won the 'Build' hackathon event, made it to the finals of the Exun quiz and gaming events, and more.
 media:
   [
-    "https://dinvpjybsthgrzixefvj.supabase.co/storage/v1/object/public/strapi-uploads/exun-photo_1679582357803.jpg",
+    "https://i.postimg.cc/j5hmxdFg/Screenshot-2025-10-24-at-10-37-23-PM.png",
   ]
 ---
 

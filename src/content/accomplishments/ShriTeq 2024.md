@@ -26,5 +26,5 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 
 2nd Place, **AdVenture**: 
 
-3rd Place, **Image-ination Senior**: 
+3rd Place, **Image-ination Senior**: Naryani Agarwal (grade 12), Ishika Jain (grade 10)
 

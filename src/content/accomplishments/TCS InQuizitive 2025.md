@@ -1,7 +1,7 @@
 ---
 title: TCS InQuizitive 
 date: 2025-09-27
-subline: Our team won the regional event at IIT Delhi out of 232 teams
+subline: Our team won the regional quiz event at IIT Delhi out of 232 teams
 media:
   [
     https://i.postimg.cc/5NgJqzw3/PHOTO-2025-10-15-23-22-24.jpg,

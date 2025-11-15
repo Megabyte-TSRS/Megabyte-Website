@@ -76,5 +76,5 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 - Ayaan Bansal  
 - Devyansh Garg  
 - Ishika Jain  
-- Vedaan  
+- Vedaan Kumar
 - Vedant Garg  

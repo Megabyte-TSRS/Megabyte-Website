@@ -1,20 +1,28 @@
 ---
 title: ShriTeq 2025
 date: 2025-11-13
-subline: TSRS Moulsari and Vasant Vihar's teams finished as overall runners-up in ShriTeq 2025
+subline: TSRS Moulsari and Vasant Vihar's teams finished as overall winners in ShriTeq 2025
 media:
   [
-    https://i.postimg.cc/RFkf8sVV/Screenshot-2025-07-27-at-2-19-31-AM.png,
+    https://i.postimg.cc/FKgXcgQq/Screenshot-2025-11-14-at-2-55-34-PM.png,
   ]
 ---
 
-Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating in 14 events over the course of 11 days, finished as runners-up in ShriTeq 2025.
+Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating in 14 events over the course of 11 days, finished as the overall winners in ShriTeq 2025.
 
 ---
 
 **Notable results**
 
-1st Place, **Pixel Mania**: Disha (grade 4), Sahil (grade 4)
+1st Place, **Junior Quiz**: Aryan Agrawal, Aarin Kapur, Kiaan Hasija
+
+1st Place, **Middle Quiz**: Ishaan Swarup (grade 8), Madhav Singal (grade 8), Viraaj Verma (grade 7)
+
+1st Place, **Senior Quiz**: Attharv Bhagchandka (grade 11), Saiansh Tapuriah (grade 10), Ayaan Bansal (grade 9)
+
+1st Place, **Pixel Mania**: Muhammad Darim (grade 4), Neev Guha (grade 4)
+
+1st Place, **Scratch Mania**: Arshit Goel (grade 5), Arunima Chaudhry (grade 5)
 
 2nd Place, **Middle AdVenture**: Madhav Singal (grade 8), Vyas Bansal (grade 7)
 
@@ -24,5 +32,6 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 
 3rd Place, **Powerplay**: Vivaan Vasudeva (grade 12), Aakansh Raman Bhargava (grade 11), Aryan Mago (grade 11), Shaurya Katyal (grade 11), Sidhant Malhotra (grade 11)
 
-3rd Place, **Putt Partee**: Abeer Pandit (grade 9), Ayaan Bansal (grade 9)
+3rd Place, **Senior Image-ination**: Ishika Jain (grade 11), Vihaan Nigam (grade 10)
 
+3rd Place, **Putt Partee**: Abeer Pandit (grade 9), Ayaan Bansal (grade 9)

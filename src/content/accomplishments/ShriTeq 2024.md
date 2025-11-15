@@ -27,4 +27,3 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 2nd Place, **CodeCombat**: Devyansh Garg (grade 10)
 
 3rd Place, **Senior Image-ination**: Naryani Agarwal (grade 12), Ishika Jain (grade 10)
-

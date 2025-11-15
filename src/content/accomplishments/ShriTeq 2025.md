@@ -35,3 +35,46 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 3rd Place, **Senior Image-ination**: Ishika Jain (grade 11), Vihaan Nigam (grade 10)
 
 3rd Place, **Putt Partee**: Abeer Pandit (grade 9), Ayaan Bansal (grade 9)
+
+---
+
+**Special Thanks to:**
+
+**Lead OC**
+- Aarush Agarwal  
+- Abhyudaya Gupta  
+- Ahan Som  
+
+**Teachers in Charge**
+- Alka ma’am  
+- Babita ma’am  
+- Divya ma’am  
+- Priyanka ma’am  
+- Shalini ma’am  
+
+**Media**
+- Ishika Jain  
+- Madhav Singal  
+
+**Event OCs**
+- Attharv Bhagchandka *(Code Combat)*  
+- Devyansh Garg *(Task Force, Putt Partee)*  
+- Paarth Bansal *(Powerplay)*  
+
+**OC**
+- Ashvin S. Alag  
+- Divyam Gupta  
+- Devyansh Garg
+- Saarang Kabra  
+- Shayan Sethi  
+
+**Installations**
+- Aarush Aggarwal  
+- Abhyudaya Gupta  
+- Amrit Jolly  
+- Arbaan Chaudhry  
+- Ayaan Bansal  
+- Devyansh Garg  
+- Ishika Jain  
+- Vedaan  
+- Vedant Garg  

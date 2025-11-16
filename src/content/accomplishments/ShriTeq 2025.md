@@ -72,7 +72,7 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 - Aarush Aggarwal  
 - Abhyudaya Gupta  
 - Amrit Jolly  
-- Arbaan Chaudhry  
+- Arhaan Choudhary 
 - Ayaan Bansal  
 - Devyansh Garg  
 - Ishika Jain  

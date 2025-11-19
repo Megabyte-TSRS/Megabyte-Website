@@ -6,6 +6,7 @@ media:
   [
     https://i.postimg.cc/FKgXcgQq/Screenshot-2025-11-14-at-2-55-34-PM.png,
   ]
+highlighted: true
 ---
 
 Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating in 14 events over the course of 11 days, finished as the overall winners in ShriTeq 2025.

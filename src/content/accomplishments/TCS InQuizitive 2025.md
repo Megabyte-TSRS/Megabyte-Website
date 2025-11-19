@@ -6,6 +6,7 @@ media:
   [
     https://i.postimg.cc/5NgJqzw3/PHOTO-2025-10-15-23-22-24.jpg,
   ]
+highlighted: true
 ---
 
 Our team emerged vicotrious at TCS InQuisitive Delhi, a quiz competition organized by Tata Consultancy Services and hosted at IIT Delhi. The event featured multiple challenging rounds where our team navigated diverse topics. Competing against some of the brightest minds from across the region, our team demonstrated quick thinking, collaboration, and depth of knowledge to secure the 1st place title.

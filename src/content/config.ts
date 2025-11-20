@@ -54,7 +54,7 @@ const conductorsCollection = defineCollection({
     })).optional(),
   }),
 });
-const pastHeadsCollection = defineCollection({
+const contributorsCollection = defineCollection({
   type: "data",
   schema: z.object({
     name: z.string(),
@@ -84,5 +84,5 @@ export const collections = {
   resources: resourcesCollection,
   sessions: sessionsCollection, // Corrected from sessionCollection to sessionsCollection
   conductors: conductorsCollection,
-  pastHeads: pastHeadsCollection,
+  contributors: contributorsCollection,
 };

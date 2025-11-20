@@ -2,18 +2,18 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const pastHeads = await getCollection("pastHeads");
-type PastHeadEntry = typeof pastHeads[number];
-type YearInfo = PastHeadEntry["data"]["years"][number];
+const contributors = await getCollection("contributors");
+type ContributorsEntry = typeof contributors[number];
+type YearInfo = ContributorsEntry["data"]["years"][number];
 type RoleType = YearInfo["roles"][number];
 type FlattenedEntry = {
-  person: PastHeadEntry;
+  person: ContributorsEntry;
   year: number;
   roles: RoleType[];
 };
 
 // Flatten the data structure: create an entry for each year with its roles
-const flattened: FlattenedEntry[] = pastHeads.flatMap((person) =>
+const flattened: FlattenedEntry[] = contributors.flatMap((person) =>
   person.data.years.map((yearData: YearInfo): FlattenedEntry => ({
     person,
     year: yearData.year,
@@ -73,7 +73,7 @@ const colours = [
 
     {
       years.length === 0 ? (
-        <div class="text-center text-lg">No past heads/collaborators to display at the moment.</div>
+        <div class="text-center text-lg">No contributors to display at the moment.</div>
       ) : (
         <div class="mb-0 flex w-full flex-col gap-16">
           {years.map((year) => {

@@ -62,8 +62,6 @@ const pastHeadsCollection = defineCollection({
       year: z.number(),
       roles: z.array(
         z.enum([
-          "Student Head",
-          "Collaborator",
           "Website Developer",
           "Website Maintainer",
           "Head of society",

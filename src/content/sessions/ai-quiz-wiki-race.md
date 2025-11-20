@@ -2,7 +2,7 @@
 title: Race through Tech and AI
 date: 2025-07-10
 description: "In this interactive session, Megabyte Society members tested their knowledge of AI through a Kahoot quiz, learning more about AI in the process. Towards the end of the session, they raced through Wikipedia pages in a tech-themed challenge. It was learning at full speed!"
-conductedBy: [devyansh-garg]
+conductedBy: [Devyansh-Garg]
 ---
 
 The session began with an AI Quiz, a custom Kahoot created to introduce students to essential AI topics in a fun and engaging way. The quiz featured questions on:

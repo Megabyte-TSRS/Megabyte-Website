@@ -54,10 +54,37 @@ const conductorsCollection = defineCollection({
     })).optional(),
   }),
 });
+const pastHeadsCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    name: z.string(),
+    years: z.array(z.object({
+      year: z.number(),
+      roles: z.array(
+        z.enum([
+          "Student Head",
+          "Collaborator",
+          "Website Developer",
+          "Website Maintainer",
+          "Head of society",
+          "Secretary of society",
+        ]),
+      ),
+    })), // array of years and roles
+    email: z.string().email().optional(),
+    img: z.string().optional(),
+    bio: z.string().optional(),
+    links: z.array(z.object({
+      name: z.string(),
+      url: z.string().url(),
+    })).optional(),
+  }),
+});
 export const collections = {
   accomplishments: accomplishmentsCollection,
   notices: noticesCollection,
   resources: resourcesCollection,
   sessions: sessionsCollection, // Corrected from sessionCollection to sessionsCollection
   conductors: conductorsCollection,
+  pastHeads: pastHeadsCollection,
 };

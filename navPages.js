@@ -4,6 +4,7 @@ const navPages = {
     "Sessions": "/sessions",
     "Accomplishments": "/accomplishments",
     "Resources": "/resources",
+    "Contributors": "/past-heads",
     "About": "/about",
 };
 export default navPages;

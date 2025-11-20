@@ -1,0 +1,20 @@
+{
+  "name": "Varun Sahni",
+  "years": [
+    {
+      "year": 2023,
+      "roles": ["Website Developer"]
+    },
+    {
+      "year": 2024,
+      "roles": ["Website Maintainer"]
+    }
+  ],
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/notskamr"
+    }
+  ]
+}
+

@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const pastHeads = await getCollection("pastHeads");
+type PastHeadEntry = typeof pastHeads[number];
+type YearInfo = PastHeadEntry["data"]["years"][number];
+type RoleType = YearInfo["roles"][number];
+type FlattenedEntry = {
+  person: PastHeadEntry;
+  year: number;
+  roles: RoleType[];
+};
+
+// Flatten the data structure: create an entry for each year with its roles
+const flattened: FlattenedEntry[] = pastHeads.flatMap((person) =>
+  person.data.years.map((yearData: YearInfo): FlattenedEntry => ({
+    person,
+    year: yearData.year,
+    roles: yearData.roles ?? [],
+  })),
+);
+
+// Group by year, then sort years descending
+const groupedByYear = flattened.reduce((acc, entry) => {
+  const year = entry.year;
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(entry);
+  return acc;
+}, {} as Record<number, FlattenedEntry[]>);
+
+// Sort people within each year by the highest-priority role
+const roleOrder: Record<RoleType, number> = {
+  "Head of society": 0,
+  "Secretary of society": 1,
+  "Website Developer": 2,
+  "Website Maintainer": 3,
+};
+const getRolePriority = (roles: RoleType[]) =>
+  roles.reduce((min, role) => Math.min(min, roleOrder[role] ?? Number.MAX_SAFE_INTEGER), Number.MAX_SAFE_INTEGER);
+const sortRoles = (roles: RoleType[]) => [...roles].sort((a, b) => (roleOrder[a] ?? 99) - (roleOrder[b] ?? 99));
+Object.keys(groupedByYear).forEach((year) => {
+  groupedByYear[Number(year)].sort((a, b) => {
+    return getRolePriority(a.roles) - getRolePriority(b.roles);
+  });
+});
+
+const years = Object.keys(groupedByYear)
+  .map(Number)
+  .sort((a, b) => b - a); // Sort years descending
+
+const colours = [
+  "#81effc",
+  "#ffe81b",
+  "#ff7474",
+];
+---
+
+<Layout title="Contributors | Megabyte">
+  <div class="bg-cube h-full px-8 pt-24 pb-4 sm:pt-36 md:px-24">
+    <div class="mb-12 flex flex-row items-center justify-center">
+      <div class="title-box bg-[#ceff1b] py-6 px-6 text-center md:w-3/4">
+        <h1 class="mb-5 text-center text-2xl font-bold md:text-3xl xl:text-4xl">
+          Contributors
+        </h1>
+        <p class="mb-3 text-center text-lg md:text-xl xl:text-xl">
+          A tribute to all the student heads and collaborators who have contributed to Megabyte over the years.
+        </p>
+      </div>
+    </div>
+
+    {
+      years.length === 0 ? (
+        <div class="text-center text-lg">No past heads/collaborators to display at the moment.</div>
+      ) : (
+        <div class="mb-0 flex w-full flex-col gap-16">
+          {years.map((year) => {
+            const entriesForYear = groupedByYear[year] as FlattenedEntry[];
+            return (
+            <div class="year-section">
+              <div class="year-header mb-8 flex items-baseline gap-4">
+                <h2 class="year-title text-5xl font-bold">{year}</h2>
+                <div class="year-line flex-grow border-t-[3px] border-black"></div>
+              </div>
+              <div class="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-start">
+                {entriesForYear.map((entry, index) => {
+                  const person = entry.person;
+                  const colour = colours[index % colours.length];
+                  const primaryLink = person.data.links && person.data.links.length > 0 
+                    ? person.data.links[0].url 
+                    : null;
+                  const sortedRoles = sortRoles(entry.roles);
+                  const primaryRole = sortedRoles[0] ?? "Contributor";
+                  const secondaryRoles = sortedRoles.slice(1);
+                  const hasContent = person.data.email || person.data.bio;
+                  return (
+                    <div class="person-card bg-white flex flex-col group">
+                      <div class="person-header flex-shrink border-b-[3px] border-black px-6 pt-5 pb-4 relative overflow-hidden" style={`background-color: ${colour}`}>
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-black"></div>
+                        {primaryLink ? (
+                          <a 
+                            href={primaryLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="name-link block"
+                          >
+                            <h3 class="text-2xl font-bold mb-2 relative z-10">{person.data.name}</h3>
+                          </a>
+                        ) : (
+                          <h3 class="text-2xl font-bold mb-2">{person.data.name}</h3>
+                        )}
+                        <p class="primary-role relative z-10">
+                          {primaryRole}
+                        </p>
+                        {secondaryRoles.length > 0 && (
+                          <p class="secondary-role relative z-10">
+                            {secondaryRoles.join(" • ")}
+                          </p>
+                        )}
+                      </div>
+                      {hasContent && (
+                        <div class="person-content flex flex-col gap-4 px-6 pt-4 pb-5">
+                          {person.data.email && (
+                            <div class="info-item">
+                              <a 
+                                href={`mailto:${person.data.email}`} 
+                                class="email-link text-blue-600 hover:text-blue-800 hover:underline break-all transition-colors"
+                              >
+                                {person.data.email}
+                              </a>
+                            </div>
+                          )}
+                          {person.data.bio && (
+                            <div class="info-item">
+                              <p class="text-gray-700 leading-relaxed">{person.data.bio}</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )})}
+        </div>
+      )
+    }
+
+    <style>
+      .title-box {
+        @apply border-[3px] border-solid border-black shadow-[6px_6px_0_0_black];
+      }
+      .person-card {
+        @apply border-[3px] border-solid border-black shadow-[6px_6px_0_0] duration-300 transition-all;
+      }
+      .person-card:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0 0 #000;
+      }
+      .year-title {
+        min-width: 120px;
+      }
+      .year-line {
+        height: 3px;
+        margin-top: 0.5rem;
+      }
+      .name-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      .name-link:hover h3 {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .person-header {
+        position: relative;
+      }
+      .primary-role {
+        @apply font-bold uppercase tracking-wide text-sm;
+      }
+      .secondary-role {
+        @apply uppercase tracking-wide text-sm;
+      }
+      .info-item {
+        padding-bottom: 0.5rem;
+      }
+      .email-link {
+        font-size: 0.95rem;
+      }
+    </style>
+  </div>
+</Layout>

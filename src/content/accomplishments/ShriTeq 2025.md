@@ -42,40 +42,41 @@ Teams from The Shri Ram School, Moulsari and Vasant Vihar, after participating i
 **Special Thanks to:**
 
 **Lead OC**
-- Aarush Agarwal  
-- Abhyudaya Gupta  
-- Ahan Som  
+- Aarush Aggarwal
+- Abhyudaya Gupta
+- Ahan Som
 
 **Teachers in Charge**
-- Alka ma’am  
-- Babita ma’am  
-- Divya ma’am  
-- Priyanka ma’am  
-- Shalini ma’am  
+- Alka ma’am
+- Babita ma’am
+- Divya ma’am
+- Priyanka ma’am
+- Shalini ma’am
 
 **Media**
-- Ishika Jain  
-- Madhav Singal  
+- Ishika Jain
+- Madhav Singal
 
 **Event OCs**
-- Attharv Bhagchandka *(Code Combat)*  
-- Devyansh Garg *(Task Force, Putt Partee)*  
-- Paarth Bansal *(Powerplay)*  
+- Attharv Bhagchandka *(Code Combat)*
+- Devyansh Garg *(Task Force, Putt Partee)*
+- Paarth Bansal *(Powerplay)*
+- Shayan Sethi *(Task Force)*
 
 **OC**
-- Ashvin S. Alag  
-- Divyam Gupta  
+- Ashvin S. Alag
+- Divyam Gupta
 - Devyansh Garg
-- Saarang Kabra  
-- Shayan Sethi  
+- Saarang Kabra
+- Shayan Sethi
 
 **Installations**
-- Aarush Aggarwal  
-- Abhyudaya Gupta  
-- Amrit Jolly  
-- Arhaan Choudhary 
-- Ayaan Bansal  
+- Aarush Aggarwal
+- Abhyudaya Gupta
+- Amrit Jolly
+- Arhaan Choudhary
+- Ayaan Bansal
 - Devyansh Garg  
-- Ishika Jain  
+- Ishika Jain
 - Vedaan Kumar
-- Vedant Garg  
+- Vedant Garg

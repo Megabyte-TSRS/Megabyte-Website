@@ -1,7 +1,7 @@
 ---
 title: Tech in Action
 date: 2025-12-11
-description: "Society members explored how technology connects different fields and worked in teams to solve real-world problems using tech."
+description: "Society members explored the interdisciplinary applications of technology across diverse fields. After that, they collaborated in groups to identify real-world problems within a chosen field and propose practical, technology-driven solutions, encouraging critical thinking, creativity, and real-world application of technology."
 conductedBy: [Devyansh-Garg]
 ---
 

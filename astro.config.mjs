@@ -23,7 +23,8 @@ export default defineConfig({
   redirects: {
     "/edit": "/admin",
     "/content": "/admin",
-    "/admin": "/admin/index.html"
+    "/admin": "/admin/index.html",
+    "/75330": "https://drive.google.com/file/d/1ShSPutAc5cu5GhZrDaH5OjczFpy25SqU"
   },
   adapter: netlify(),
 });

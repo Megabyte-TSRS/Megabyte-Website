@@ -37,16 +37,16 @@ The organising team consisted of:
 3. Abhyudaya Gupta (Head of ICT)
 4. Mannat Vig (Head of Activities)
 5. Devyansh Garg (Head of Megabyte)
-5. Vedant Garg (Secretary of ICT)
-6. Simran Sharma (Secretary of ICT)
-7. Veer Singh Ahluwalia (Secretary of Activities)
-8. Vivaan Dhingra (Secretary of Activities)
-9. Shayan Sethi
-10. Attharv Bhagchandka
-11. Zoey Singh
-12. Shiven Deveshwar
-13. Anay Bhattacharya
-14. Yuveer Rajpal
-15. Ishaani Singh
+6. Vedant Garg (Secretary of ICT)
+7. Simran Sharma (Secretary of ICT)
+8. Veer Singh Ahluwalia (Secretary of Activities)
+9. Vivaan Dhingra (Secretary of Activities)
+10. Shayan Sethi
+11. Attharv Bhagchandka
+12. Zoey Singh
+13. Shiven Deveshwar
+14. Anay Bhattacharya
+15. Yuveer Rajpal
+16. Ishaani Singh
 
 We thank everyone who participated in the Crypt Hunt this year, and hope for it to continue to foster out-of-the-box-thinking and community building through technology in future years.
